@@ -1,0 +1,122 @@
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(90deg, $color-bg-1 0%, $color-bg-2 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+.boxLucky {
+  position: relative;
+  border: 10px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 10px 10px 20px $color-shadow-1;
+  margin-bottom: 100px;
+
+  &::before {
+    content: "";
+    width: 100px;
+    height: 54px;
+    background-image: url(../images/arrow.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    @extend %prr;
+    right: -60px;
+    z-index: 3;
+  }
+
+  &__wrap {
+    width: 750px;
+    height: 500px;
+    overflow: hidden;
+  }
+
+  &__person {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    padding: 20px;
+    background: linear-gradient(90deg, $color-bg-person-1 0%, $color-bg-person-2 100%);
+    
+    &:not(:first-child) {
+      border-top: solid 2px $color-shadow-3;
+    }
+
+    &:not(:last-child) {
+      border-bottom: solid 2px $color-shadow-2;
+    }
+
+    &--image {
+      width: 210px;
+      height: 210px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-color: $color-white-1;
+      flex-shrink: 0;
+    }
+
+    &--info {
+      width: 100%;
+      padding: 30px;
+      color: $color-white-1;
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    &--name {
+      font-size: 30px;
+      line-height: 40px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-shadow: 3px 3px 6px $color-shadow-1;
+    }
+
+    &--attr {
+      display: flex;
+      align-items: center;
+    }
+
+    &--itemAtrr {
+      margin-right: 25px;
+      padding-left: 20px;
+      position: relative;
+
+      &::before {
+        @extend %font-icon;
+        @extend %pll;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+.btnSpin {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    width: 280px;
+    height: 65px;
+    font-size: 30px;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    border-bottom: 4px solid $color-btn-border;
+    border-radius: 6px;
+    background-color: $color-btn-bg;
+    background-image: url(../images/bg-btn-rolling.svg);
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    transition: all .2s ease;
+    position: relative;
+  }
+}

@@ -1,0 +1,36 @@
+extends _layout/_layout
+
+block main-content
+  .main-content(data-lucky-person)
+    .mainLucky
+      .boxLucky
+        .boxLucky__wrap
+          .boxLucky__listPerson(data-list-person style="transform: translateY(-125px)")
+            .boxLucky__person.boxLucky__person--anonymous
+              .boxLucky__person--image(style="background-image: url(./images/preview.svg)")
+              .boxLucky__person--info
+                .boxLucky__person--name Lucky Person Today
+                .boxLucky__person--attr
+                  .boxLucky__person--itemAtrr.fa-chess-queen 5
+                  .boxLucky__person--itemAtrr.fa-eye 30
+                  .boxLucky__person--itemAtrr.fa-comments 150
+            .boxLucky__person.boxLucky__person--anonymous
+              .boxLucky__person--image(style="background-image: url(./images/preview.svg)")
+              .boxLucky__person--info
+                .boxLucky__person--name Lucky Person Today
+                .boxLucky__person--attr
+                  .boxLucky__person--itemAtrr.fa-chess-queen 5
+                  .boxLucky__person--itemAtrr.fa-eye 30
+                  .boxLucky__person--itemAtrr.fa-comments 150
+            .boxLucky__person.boxLucky__person--anonymous
+              .boxLucky__person--image(style="background-image: url(./images/preview.svg)")
+              .boxLucky__person--info
+                .boxLucky__person--name Lucky Person Today
+                .boxLucky__person--attr
+                  .boxLucky__person--itemAtrr.fa-chess-queen 5
+                  .boxLucky__person--itemAtrr.fa-eye 30
+                  .boxLucky__person--itemAtrr.fa-comments 150
+      .btnSpin 
+        button(data-btn-spin) Spin
+  .loading.active(data-loading)
+    img(src="./images/loading.svg", alt="")

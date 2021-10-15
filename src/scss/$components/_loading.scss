@@ -1,0 +1,21 @@
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-bg-loading;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: visible;
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+    visibility: hidden;
+    pointer-events: auto;
+  }
+}
