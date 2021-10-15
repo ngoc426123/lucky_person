@@ -85,7 +85,6 @@ export default class LuckyPerson {
     this.props.offsetMax = this.props.dataRender[this.props.dataRender.length - 2].offset;
     this.props.offsetClone = (data.count < 10 ? 5 : 10) * personHeight;
     this.props.spin = gsap.timeline({ defaults: {duration: 0, ease: 'none'}});
-    console.log(this.props);
     this.renderPerson();
   }
 
