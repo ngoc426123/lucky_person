@@ -3,9 +3,12 @@ extends _layout/_layout
 block main-content
   .main-content(data-lucky-person)
     .mainLucky
-      .boxLucky
+      .titleLucky
+        h2 Tuan Khanh C-ho Company
+        h1 Lucky Person Programmer
+      .boxLucky(data-box-lucky)
         .boxLucky__wrap
-          .boxLucky__listPerson(data-list-person style="transform: translateY(-125px)")
+          .boxLucky__listPerson(data-list-person style="transform: translateY(-100px)")
             .boxLucky__person.boxLucky__person--anonymous
               .boxLucky__person--image(style="background-image: url(./images/preview.svg)")
               .boxLucky__person--info
@@ -31,6 +34,8 @@ block main-content
                   .boxLucky__person--itemAtrr.fa-eye 30
                   .boxLucky__person--itemAtrr.fa-comments 150
       .btnSpin 
-        button(data-btn-spin) Spin
+        button(data-btn-spin)
+          span Spin
+          span Stop
   .loading.active(data-loading)
     img(src="./images/loading.svg", alt="")
